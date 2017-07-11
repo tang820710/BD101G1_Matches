@@ -1,0 +1,58 @@
+body {
+  background: linear-gradient(180deg, #E1F0F7, #9CFFFC); }
+
+section.friend {
+  width: 100%;
+  max-width: 1280px;
+  margin: auto; }
+  section.friend h2 {
+    font-size: 36px;
+    text-align: center;
+    padding-bottom: 1%; }
+  section.friend p {
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 60px; }
+  section.friend .searchbar {
+    display: flex;
+    justify-content: space-around; }
+    section.friend .searchbar .search {
+      border: 0;
+      padding: 10px 15px;
+      font-size: 15px;
+      border-radius: 10px;
+      outline: 0; }
+    section.friend .searchbar .gosearch {
+      position: relative;
+      left: -40px;
+      top: -2px;
+      width: 40px;
+      height: 40px;
+      color: #fff;
+      font-size: 20px;
+      background-color: #66DBFF;
+      border-radius: 50%;
+      vertical-align: middle;
+      text-align: center;
+      line-height: 40px;
+      cursor: pointer; }
+    section.friend .searchbar .filter,
+    section.friend .searchbar .random {
+      display: inline-block;
+      padding: 12px 30px;
+      border-radius: 30px;
+      background-color: #66DBFF;
+      color: #fff; }
+    section.friend .searchbar .filter .filteron {
+      display: none; }
+  section.friend .stage {
+    background-image: url("../images/stage.png");
+    background-repeat: repeat-x;
+    height: 240px; }
+  section.friend .searchmem {
+    box-sizing: border-box; }
+    section.friend .searchmem > div {
+      display: inline-block;
+      width: 12%; }
+      section.friend .searchmem > div img {
+        width: 100%; }

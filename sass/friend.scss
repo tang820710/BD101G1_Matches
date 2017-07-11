@@ -1,0 +1,73 @@
+body {
+   background: linear-gradient(180deg, #E1F0F7, #9CFFFC);
+}
+
+section.friend {
+   width: 100%;
+   max-width: 1280px;
+   margin: auto;
+   h2 {
+      font-size: 36px;
+      text-align: center;
+      padding-bottom: 1%;
+   }
+   p {
+      font-size: 20px;
+      text-align: center;
+      padding-bottom: 60px;
+   }
+   .searchbar {
+      display: flex;
+      justify-content: space-around;
+      .search {
+         border: 0;
+         padding: 10px 15px;
+         font-size: 15px;
+         border-radius: 10px;
+         outline: 0;
+      }
+      .gosearch {
+         position: relative;
+         left: -40px;
+         top: -2px;
+         width: 40px;
+         height: 40px;
+         color: #fff;
+         font-size: 20px;
+         background-color: #66DBFF;
+         border-radius: 50%;
+         vertical-align: middle;
+         text-align: center;
+         line-height: 40px;
+         cursor: pointer;
+      }
+      .filter,
+      .random {
+         display: inline-block;
+         padding: 12px 30px;
+         border-radius: 30px;
+         background-color: #66DBFF;
+         color: #fff;
+      }
+      .filter {
+         .filteron {
+            display: none;
+         }
+      }
+   }
+   .stage {
+      background-image: url("../images/stage.png");
+      background-repeat: repeat-x;
+      height: 240px;
+   }
+   .searchmem {
+      box-sizing: border-box;
+      &>div {
+         display: inline-block;
+         width: 12%;
+         img{
+            width: 100%;
+         }
+      }
+   }
+}

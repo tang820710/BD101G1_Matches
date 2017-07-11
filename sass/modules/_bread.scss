@@ -1,0 +1,12 @@
+.bread {
+   padding: 1% 5%;
+   font-size: 15px;
+   a {
+      padding: 0.3%;
+      color: #8A7676;
+      text-decoration: none;
+      &:hover {
+         text-decoration: underline;
+      }
+   }
+}

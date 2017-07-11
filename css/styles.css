@@ -3,63 +3,93 @@ body {
   font-family: arial, 'cwTeXHei';
   color: #666; }
 
+a {
+  text-decoration: none; }
+
 header {
   background-color: #666767;
   width: 100%;
-  position: relative; }
-  header .container {
-    position: relative;
-    margin: auto;
+  position: fixed;
+  top: 0;
+  text-align: center; }
+  header > ul {
+    display: none;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #66DBFF;
+    width: 250px;
+    height: 100%; }
+    header > ul li {
+      padding: 20% 0; }
+      header > ul li a {
+        color: #FFF;
+        padding: 20%; }
+  header nav {
     width: 100%;
     max-width: 1280px;
-    text-align: center;
+    margin: auto;
     color: #FFF;
-    background-color: #666767; }
-    header .container nav {
+    background-color: #666767;
+    padding: 25px 0 10px 0;
+    display: inline-block;
+    position: relative; }
+    header nav .hamburger {
+      display: none; }
+    header nav ul {
+      font-size: 18px;
+      display: inline-block;
       position: relative;
-      left: -0.8%;
-      padding: 25px 0 12px 0;
-      display: inline-block; }
-      header .container nav ul {
-        font-size: 18px;
+      right: 42px; }
+      header nav ul li {
+        vertical-align: middle;
         display: inline-block; }
-        header .container nav ul li {
-          vertical-align: middle;
+        header nav ul li a {
+          color: #FFF;
           display: inline-block;
-          margin: 0 25px; }
-      header .container nav .logo {
-        display: inline-block;
-        width: 67px;
-        margin: 0 25px; }
-        header .container nav .logo img {
-          vertical-align: middle;
-          width: 100%; }
-    header .container .member {
-      padding-top: 15px;
-      vertical-align: top;
-      display: inline-block; }
-      header .container .member img {
+          width: 80px;
+          padding: 5%; }
+    header nav .logo {
+      display: inline-block;
+      width: 67px;
+      margin: 0 2.5%;
+      position: relative;
+      right: 42px; }
+      header nav .logo img {
+        vertical-align: middle;
+        width: 100%; }
+    header nav .member {
+      position: absolute;
+      right: 7%;
+      margin-top: -5px;
+      display: inline-block;
+      padding: 0 2%; }
+      header nav .member a {
+        color: #FFF; }
+      header nav .member img {
         width: 40px;
         height: 40px;
         border-radius: 50%;
         vertical-align: middle; }
-      header .container .member span {
+      header nav .member span {
         font-size: 14px; }
-    header .container .cart {
-      padding-top: 15px;
+    header nav .cart {
+      position: absolute;
+      right: 4%;
       vertical-align: top;
       display: inline-block;
-      width: 25px; }
-      header .container .cart img {
+      width: 30px; }
+      header nav .cart img {
         width: 100%;
         vertical-align: middle; }
-    header .container:before {
+    header nav:before {
       content: '';
       display: block;
       width: 140px;
       height: 40px;
       position: absolute;
-      top: 90%;
+      top: 100%;
       left: 0;
       right: 0;
       margin: 0 auto;
@@ -70,15 +100,55 @@ header {
     content: " ";
     display: block;
     position: absolute;
-    background: linear-gradient(-45deg, #ffffff 6px, transparent 0), linear-gradient(45deg, #ffffff 6px, transparent 0);
-    background-position: left-bottom;
+    background: linear-gradient(-135deg, #666767 6px, transparent 0), linear-gradient(135deg, #666767 6px, transparent 0);
+    background-position: left bottom;
     background-repeat: repeat-x;
     background-size: 12px 12px;
-    bottom: 0px;
+    bottom: -11px;
     left: 0px;
     width: 100%;
-    height: 12px; }
+    height: 11px; }
 
+.headerb {
+  height: 140px;
+  background-color: transparent; }
+
+@media screen and (max-width: 767px) {
+  header > ul {
+    display: initial; }
+  header nav {
+    padding: 12px 0; }
+    header nav ul {
+      display: none; }
+    header nav .logo {
+      right: 0; }
+    header nav .hamburger {
+      position: absolute;
+      left: 5%;
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      cursor: pointer; }
+      header nav .hamburger:before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 50px;
+        height: 5px;
+        background-color: #ccc;
+        top: 0px;
+        bottom: 0px;
+        left: 5px;
+        margin: auto;
+        box-shadow: 0px 15px 0px #ccc, 0px -15px 0px #ccc; }
+    header nav .member {
+      margin-top: 0; }
+    header nav .cart {
+      position: fixed;
+      top: 30%;
+      background-color: #666767;
+      padding: 1.5%;
+      border-radius: 50%; } }
 footer {
   width: 100%;
   text-align: center;
@@ -86,6 +156,16 @@ footer {
   background-color: #4D4D4D;
   font-size: 14px;
   padding: 20px 0; }
+
+.bread {
+  padding: 1% 5%;
+  font-size: 15px; }
+  .bread a {
+    padding: 0.3%;
+    color: #8A7676;
+    text-decoration: none; }
+    .bread a:hover {
+      text-decoration: underline; }
 
 .gotop {
   width: 56px;
@@ -95,3 +175,11 @@ footer {
   cursor: pointer; }
   .gotop img {
     width: 100%; }
+
+@media screen and (max-width: 767px) {
+  .gotop {
+    display: none; } }
+body {
+  left: 0;
+  overflow-x: hidden;
+  position: relative; }

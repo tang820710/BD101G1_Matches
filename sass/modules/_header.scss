@@ -1,43 +1,74 @@
 header {
    background-color: #666767;
    width: 100%;
-   position: relative;
-   .container {
-      position: relative;
-      margin: auto;
+   position: fixed;
+   top: 0;
+   text-align: center;
+   &>ul {
+      display: none;
+      z-index: 100;
+      position: fixed;
+      top: 0;
+      left: -250px;
+      background-color: #66DBFF;
+      width: 250px;
+      height: 100%;
+      li {
+         padding: 20% 0;
+         a {
+            color: #FFF;
+            padding: 20%;
+         }
+      }
+   }
+   nav {
       width: 100%;
       max-width: 1280px;
-      text-align: center;
+      margin: auto;
       color: #FFF;
       background-color: #666767;
-      nav {
-         position: relative;
-         left: -0.8%;
-         padding: 25px 0 12px 0;
+      padding: 25px 0 10px 0;
+      display: inline-block;
+      position: relative;
+      .hamburger {
+         display: none;
+      }
+      ul {
+         font-size: 18px;
          display: inline-block;
-         ul {
-            font-size: 18px;
+         position: relative;
+         right: 42px;
+         li {
+            vertical-align: middle;
             display: inline-block;
-            li {
-               vertical-align: middle;
+            a {
+               color: #FFF;
                display: inline-block;
-               margin: 0 25px;
-            }
-         }
-         .logo {
-            display: inline-block;
-            width: 67px;
-            margin: 0 25px;
-            img {
-               vertical-align: middle;
-               width: 100%;
+               width: 80px;
+               padding: 5%;
             }
          }
       }
-      .member {
-         padding-top: 15px;
-         vertical-align: top;
+      .logo {
          display: inline-block;
+         width: 67px;
+         margin: 0 2.5%;
+         position: relative;
+         right: 42px;
+         img {
+            vertical-align: middle;
+            width: 100%;
+         }
+      }
+      .member {
+         position: absolute;
+         right: 7%;
+         margin-top: -5px;
+         display: inline-block;
+         padding: 0 2%;
+         a {
+            color: #FFF;
+         }
          img {
             width: 40px;
             height: 40px;
@@ -49,10 +80,11 @@ header {
          }
       }
       .cart {
-         padding-top: 15px;
+         position: absolute;
+         right: 4%;
          vertical-align: top;
          display: inline-block;
-         width: 25px;
+         width: 30px;
          img {
             width: 100%;
             vertical-align: middle;
@@ -64,7 +96,7 @@ header {
          width: 140px;
          height: 40px;
          position: absolute;
-         top: 90%;
+         top: 100%;
          left: 0;
          right: 0;
          margin: 0 auto;
@@ -75,21 +107,74 @@ header {
       &:before {
          @include centerTie;
       }
-   }   
+   }
    @mixin zigzag {
       content: " ";
       display: block;
       position: absolute;
-      background: linear-gradient(-45deg, #ffffff 6px, transparent 0), linear-gradient(45deg, #ffffff 6px, transparent 0);
-      background-position: left-bottom;
+      background: linear-gradient(-135deg, #666767 6px, transparent 0), linear-gradient(135deg, #666767 6px, transparent 0);
+      background-position: left bottom;
       background-repeat: repeat-x;
       background-size: 12px 12px;
-      bottom: 0px;
+      bottom: -11px;
       left: 0px;
       width: 100%;
-      height: 12px;
+      height: 11px;
    }
    &:after {
       @include zigzag;
+   }
+}
+
+.headerb {
+   height: 140px;
+   background-color: rgba(0, 0, 0, 0);
+}
+
+@media screen and (max-width: 767px) {
+   header {
+      &>ul {
+         display: initial;
+      }
+      nav {
+         padding: 12px 0;
+         ul {
+            display: none;
+         }
+         .logo {
+            right: 0;
+         }
+         .hamburger {
+            position: absolute;
+            left: 5%;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            &:before {
+               content: '';
+               position: absolute;
+               display: block;
+               width: 50px;
+               height: 5px;
+               background-color: #ccc;
+               top: 0px;
+               bottom: 0px;
+               left: 5px;
+               margin: auto;
+               box-shadow: 0px 15px 0px #ccc, 0px -15px 0px #ccc;
+            }
+         }
+         .member {
+            margin-top: 0;
+         }
+         .cart {
+            position: fixed;
+            top: 30%;
+            background-color: #666767;
+            padding: 1.5%;
+            border-radius: 50%;
+         }
+      }
    }
 }

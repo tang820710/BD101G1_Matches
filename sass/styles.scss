@@ -4,3 +4,9 @@
 @import "modules/_footer.scss";
 @import "modules/_bread.scss";
 @import "modules/_gotop.scss";
+
+body{   
+  left: 0;
+  overflow-x: hidden;
+  position: relative;
+}
