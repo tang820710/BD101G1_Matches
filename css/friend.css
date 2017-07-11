@@ -14,17 +14,21 @@ section.friend {
     text-align: center;
     padding-bottom: 60px; }
   section.friend .searchbar {
-    display: flex;
-    justify-content: space-around; }
+    position: relative;
+    text-align: center; }
+    section.friend .searchbar > label {
+      position: absolute;
+      left: 5%; }
     section.friend .searchbar .search {
       border: 0;
-      padding: 10px 15px;
+      padding: 10px;
       font-size: 15px;
       border-radius: 10px;
-      outline: 0; }
+      outline: 0;
+      font-family: arial, 'cwTeXHei'; }
     section.friend .searchbar .gosearch {
       position: relative;
-      left: -40px;
+      left: -30px;
       top: -2px;
       width: 40px;
       height: 40px;
@@ -38,21 +42,129 @@ section.friend {
       cursor: pointer; }
     section.friend .searchbar .filter,
     section.friend .searchbar .random {
+      position: absolute;
       display: inline-block;
       padding: 12px 30px;
       border-radius: 30px;
       background-color: #66DBFF;
       color: #fff; }
-    section.friend .searchbar .filter .filteron {
-      display: none; }
-  section.friend .stage {
-    background-image: url("../images/stage.png");
-    background-repeat: repeat-x;
-    height: 240px; }
+    section.friend .searchbar .filter {
+      left: 44%; }
+    section.friend .searchbar .random {
+      right: 5%; }
+    section.friend .searchbar .filteron {
+      display: none;
+      position: absolute;
+      text-align: left;
+      left: 44%;
+      padding: 15px 30px;
+      border-radius: 15px;
+      background-color: #e0f0f8; }
+      section.friend .searchbar .filteron span {
+        display: inline-block;
+        padding: 10px 0; }
+      section.friend .searchbar .filteron label {
+        display: inline-block; }
+        section.friend .searchbar .filteron label input[type=radio] {
+          display: none; }
+        section.friend .searchbar .filteron label #male:checked + i {
+          color: #66DBFF; }
+        section.friend .searchbar .filteron label #female:checked + i {
+          color: #ff95be; }
+        section.friend .searchbar .filteron label i {
+          color: #aaa;
+          padding-left: 30px;
+          cursor: pointer; }
+        section.friend .searchbar .filteron label input[type=checkbox] {
+          width: 20px;
+          height: 20px;
+          vertical-align: middle; }
+        section.friend .searchbar .filteron label input[type=checkbox]:focus {
+          outline: 0; }
+      section.friend .searchbar .filteron label:nth-of-type(4) {
+        margin: 10px 30px; }
+      section.friend .searchbar .filteron label:nth-of-type(7) {
+        margin: 10px 30px; }
+      section.friend .searchbar .filteron #gofilt {
+        font-size: 15px;
+        font-family: arial, 'cwTeXHei';
+        position: relative;
+        left: 33%;
+        border: 0;
+        border-radius: 15px;
+        padding: 5px 20px;
+        color: #ffffff;
+        background-color: #66dbff;
+        cursor: pointer; }
+        section.friend .searchbar .filteron #gofilt:focus {
+          outline: 0; }
   section.friend .searchmem {
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 200px; }
     section.friend .searchmem > div {
       display: inline-block;
-      width: 12%; }
+      width: 11.9%;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 1; }
+      section.friend .searchmem > div:nth-child(odd) {
+        top: 100px; }
+      section.friend .searchmem > div:nth-child(even) {
+        top: 50px; }
       section.friend .searchmem > div img {
         width: 100%; }
+      section.friend .searchmem > div .cylinder {
+        width: 100%;
+        height: 20px;
+        display: inline-block;
+        position: relative;
+        background-color: #4ba6a6;
+        text-align: center;
+        z-index: -1; }
+        section.friend .searchmem > div .cylinder:before {
+          content: '';
+          display: inline-block;
+          width: 100%;
+          height: 30px;
+          background-color: #64dddd;
+          border-radius: 45%;
+          position: absolute;
+          left: 0;
+          top: -18px; }
+        section.friend .searchmem > div .cylinder:after {
+          content: '';
+          display: inline-block;
+          width: 100%;
+          height: 30px;
+          background-color: #4ba6a6;
+          border-radius: 45%;
+          position: absolute;
+          left: 0;
+          bottom: -12px;
+          z-index: -1; }
+  @media screen and (max-width: 767px) {
+    section.friend .searchbar {
+      position: relative; }
+      section.friend .searchbar label {
+        margin: auto;
+        position: initial;
+        display: block; }
+      section.friend .searchbar .filter,
+      section.friend .searchbar .random {
+        margin: auto;
+        position: initial;
+        display: block;
+        width: 150px;
+        margin: 10px auto; }
+      section.friend .searchbar .filter {
+        left: 0; }
+        section.friend .searchbar .filter .filteron {
+          display: none; }
+      section.friend .searchbar .random {
+        right: 0; } }
+
+.friend_stage {
+  background-image: url("../images/stage.png");
+  background-repeat: repeat-x;
+  height: 240px; }

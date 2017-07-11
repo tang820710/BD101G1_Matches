@@ -11,7 +11,8 @@ header {
   width: 100%;
   position: fixed;
   top: 0;
-  text-align: center; }
+  text-align: center;
+  z-index: 100; }
   header > ul {
     display: none;
     z-index: 100;
@@ -133,16 +134,15 @@ header {
         content: '';
         position: absolute;
         display: block;
-        width: 50px;
+        width: 40px;
         height: 5px;
         background-color: #ccc;
-        top: 0px;
-        bottom: 0px;
+        top: 25px;
         left: 5px;
-        margin: auto;
-        box-shadow: 0px 15px 0px #ccc, 0px -15px 0px #ccc; }
+        box-shadow: 0px 12px 0px #ccc, 0px -12px 0px #ccc;
+        border-radius: 12px; }
     header nav .member {
-      margin-top: 0; }
+      margin-top: 5px; }
     header nav .cart {
       position: fixed;
       top: 30%;
