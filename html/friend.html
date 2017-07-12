@@ -2,98 +2,227 @@
 <html>
 
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-   <link rel="stylesheet" type="text/css" href="css/reset.css">
-   <link rel="stylesheet" type="text/css" href="css/styles.css">
-   <link rel="stylesheet" type="text/css" href="css/friend.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/friend.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-   <title>Matches</title>
+  <title>Matches</title>
 </head>
 
 <body>
-   <!--(bake modules/header.html)-->
+  <!--(bake modules/header.html)-->
 
-   <!--(bake modules/bread.html)-->
+  <!--(bake modules/bread.html)-->
 
-   <section class="friend">
-      <h2>社交圈</h2>
-      <p>在Matches找到契合的夥伴吧</p>
-      <aside class="searchbar">
-         <label>            
+  <section class="friend">
+    <h2>社交圈</h2>
+    <p>在Matches找到契合的夥伴吧</p>
+    <aside class="searchbar">
+      <label>            
             <input class="search" type="search" name="memId" placeholder="請輸入要搜尋的帳號...">
             <span class="fa fa-search gosearch" aria-hidden="true"></span>
          </label>
-         <div class="filter">
-            <span>會員條件篩選</span>
-         </div>
-         <div class="filteron">
-            <span>選擇性別</span>
-            <label>
+      <div class="filter">
+        <span>會員條件篩選</span>
+      </div>
+      <div class="filteron">
+        <span>選擇性別</span>
+        <label>
                <input type="radio" name="gender" id="male" value="male">
                <i class="fa fa-mars" aria-hidden="true"></i>
             </label>
-            <label>
+        <label>
                <input type="radio" name="gender" id="female" value="female">
               <i class="fa fa-venus" aria-hidden="true"></i>
             </label><br>
-            <span>選擇興趣(可多選)</span><br>
-            <label><input type="checkbox" name="interest" value="sport">運動</label>
-            <label><input type="checkbox" name="interest" value="movie">電影</label>
-            <label><input type="checkbox" name="interest" value="music">音樂</label><br>
-            <label><input type="checkbox" name="interest" value="cock">烹飪</label>
-            <label><input type="checkbox" name="interest" value="book">文學</label>
-            <label><input type="checkbox" name="interest" value="fashion">時尚</label><br>
-            <input type="submit" id="gofilt" value="進行篩選">
-         </div>
-         <div class="random">隨機篩選</div>
-      </aside>
-      <div class="searchmem">
-         <div>
-            <img src="images/boy_people.png" alt="搜尋到的會員">
-            <span class="cylinder"></span>
-         </div>
-         <div>
-            <img src="images/girl_people.png" alt="搜尋到的會員">
-            <span class="cylinder"></span>
-         </div>
-         <div>
-            <img src="images/boy_people.png" alt="搜尋到的會員">
-            <span class="cylinder"></span>
-         </div>
-         <div>
-            <img src="images/girl_people.png" alt="搜尋到的會員">
-            <span class="cylinder"></span>
-         </div>
-         <div>
-            <img src="images/boy_people.png" alt="搜尋到的會員">
-            <span class="cylinder"></span>
-         </div>
-         <div>
-            <img src="images/girl_people.png" alt="搜尋到的會員">
-            <span class="cylinder"></span>
-         </div>
-         <div>
-            <img src="images/boy_people.png" alt="搜尋到的會員">
-            <span class="cylinder"></span>
-         </div>
-         <div>
-            <img src="images/girl_people.png" alt="搜尋到的會員">
-            <span class="cylinder"></span>
-         </div>
+        <span>選擇興趣(可多選)</span><br>
+        <label><input type="checkbox" name="interest" value="sport">運動</label>
+        <label><input type="checkbox" name="interest" value="movie">電影</label>
+        <label><input type="checkbox" name="interest" value="music">音樂</label><br>
+        <label><input type="checkbox" name="interest" value="cock">烹飪</label>
+        <label><input type="checkbox" name="interest" value="book">文學</label>
+        <label><input type="checkbox" name="interest" value="fashion">時尚</label><br>
+        <input type="submit" id="gofilt" value="進行篩選">
       </div>
+      <div class="random">隨機篩選</div>
+    </aside>
+    <div class="searchmem">
+      <div class="member">
+        <a href="#">
+          <img src="friend_img/boy_people.png" alt="搜尋到的會員">
+          <span class="cylinder"></span>
+          <div class="info">
+            <div class="avatar">
+              <img src="friend_img/boy_people.png">
+            </div>
+            <div class="basicinfo">
+              <div>暱稱: 小荒先生</div>
+              <div>性別: 男生</div>
+              <div>興趣: 文學、美食</div>
+            </div>
+            <div class="selfintro">
+              <div>自我介紹</div>
+              <div class="">很高興認識你.....</div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="member">
+        <a href="#">
+        <img src="friend_img/girl_people.png" alt="搜尋到的會員">
+        <span class="cylinder"></span>
+        <div class="info">
+          <div class="avatar">
+            <img src="friend_img/girl_people.png">
+          </div>
+          <div class="basicinfo">
+            <div>暱稱: 小咪</div>
+            <div>性別: 女生</div>
+            <div>興趣: 文學、美食</div>
+          </div>
+          <div class="selfintro">
+            <div>自我介紹</div>
+            <div class="">很高興認識你.....</div>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="member">
+        <a href="#">
+        <img src="friend_img/boy_people.png" alt="搜尋到的會員">
+        <span class="cylinder"></span>
+        <div class="info">
+          <div class="avatar">
+            <img src="friend_img/boy_people.png">
+          </div>
+          <div class="basicinfo">
+            <div>暱稱: 喔嚕嚕</div>
+            <div>性別: 男生</div>
+            <div>興趣: 文學、美食</div>
+          </div>
+          <div class="selfintro">
+            <div>自我介紹</div>
+            <div class="">很高興認識你.....</div>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="member">
+        <a href="#">
+        <img src="friend_img/girl_people.png" alt="搜尋到的會員">
+        <span class="cylinder"></span>
+        <div class="info">
+          <div class="avatar">
+            <img src="friend_img/girl_people.png">
+          </div>
+          <div class="basicinfo">
+            <div>暱稱: 唉呦威</div>
+            <div>性別: 男生</div>
+            <div>興趣: 文學、美食</div>
+          </div>
+          <div class="selfintro">
+            <div>自我介紹</div>
+            <div class="">很高興認識你.....</div>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="member">
+        <a href="#">
+        <img src="friend_img/boy_people.png" alt="搜尋到的會員">
+        <span class="cylinder"></span>
+        <div class="info">
+          <div class="avatar">
+            <img src="friend_img/boy_people.png">
+          </div>
+          <div class="basicinfo">
+            <div>暱稱: 安迪</div>
+            <div>性別: 男生</div>
+            <div>興趣: 文學、美食</div>
+          </div>
+          <div class="selfintro">
+            <div>自我介紹</div>
+            <div class="">很高興認識你.....</div>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="member">
+        <a href="#">
+        <img src="friend_img/girl_people.png" alt="搜尋到的會員">
+        <span class="cylinder"></span>
+        <div class="info">
+          <div class="avatar">
+            <img src="friend_img/girl_people.png">
+          </div>
+          <div class="basicinfo">
+            <div>暱稱: 點點小姐</div>
+            <div>性別: 女生</div>
+            <div>興趣: 文學、美食</div>
+          </div>
+          <div class="selfintro">
+            <div>自我介紹</div>
+            <div class="">很高興認識你.....</div>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="member">
+        <a href="#">
+        <img src="friend_img/boy_people.png" alt="搜尋到的會員">
+        <span class="cylinder"></span>
+        <div class="info">
+          <div class="avatar">
+            <img src="friend_img/boy_people.png">
+          </div>
+          <div class="basicinfo">
+            <div>暱稱: 艾莉絲</div>
+            <div>性別: 女生</div>
+            <div>興趣: 文學、美食</div>
+          </div>
+          <div class="selfintro">
+            <div>自我介紹</div>
+            <div class="">很高興認識你.....</div>
+          </div>
+        </div>
+        </a>
+      </div>
+      <div class="member">
+        <a href="#">
+        <img src="friend_img/girl_people.png" alt="搜尋到的會員">
+        <span class="cylinder"></span>
+        <div class="info">
+          <div class="avatar">
+            <img src="friend_img/girl_people.png">
+          </div>
+          <div class="basicinfo">
+            <div>暱稱: BeBe</div>
+            <div>性別: 女生</div>
+            <div>興趣: 文學、美食</div>
+          </div>
+          <div class="selfintro">
+            <div>自我介紹</div>
+            <div class="">很高興認識你.....</div>
+          </div>
+        </div>
+        </a>
+      </div>
+    </div>
 
-   </section>
+  </section>
 
-   <div class="friend_stage"></div>
-   <!--(bake modules/gotop.html)-->
+  <div class="friend_stage"></div>
+  <!--(bake modules/gotop.html)-->
 
-   <!--(bake modules/footer.html)-->
+  <!--(bake modules/footer.html)-->
 
-   <script src="js/script.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/friend.js"></script>
 </body>
 
 </html>
