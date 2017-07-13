@@ -1,14 +1,13 @@
-@import "modules/_var.scss";
 @import "modules/_header.scss";
 @import "modules/_footer.scss";
 @import "modules/_bread.scss";
 @import "modules/_gotop.scss";
-@import "../css/_font.css";
 
 body{   
   left: 0;
   overflow-x: hidden;
   position: relative;
+  color: #666;
 }
 a {
    text-decoration: none;

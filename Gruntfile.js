@@ -26,7 +26,7 @@ module.exports = function (grunt) {
     bake: {
       build: {
         files: {
-          'message.html': 'html/message.html',
+          'me_msg.html': 'html/me_msg.html',
           'friend.html': 'html/friend.html',
         }
       }

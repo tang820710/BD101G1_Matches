@@ -1,0 +1,32 @@
+@font-face {
+  font-family: '文鼎圓體';
+  src: url('../font/文鼎圓體M.OTF');
+}
+
+@font-face {
+  font-family: "GOTHAMRND";
+  src: url('../font/GOTHAMRND-MEDIUM.OTF');
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+  font-family: 'GOTHAMRND', '文鼎圓體', sans-serif;
+}
+input {
+  font-family: 'GOTHAMRND', '文鼎圓體', sans-serif;
+  /*font-size: 50px;*/
+}
+button {
+  font-family: 'GOTHAMRND', '文鼎圓體', sans-serif;
+  /*font-size: 50px;*/
+}
+
+textarea:focus, input:focus , button:focus{
+    outline: none;
+}
