@@ -26,12 +26,8 @@ module.exports = function (grunt) {
     bake: {
       build: {
         files: {
-          'index.html': 'html/index.html',
-          'exchange.html': 'html/exchange.html',
+          'test.html': 'html/test.html',
           'friend.html': 'html/friend.html',
-          'shop.html': 'html/shop.html',
-          'act.html': 'html/act.html',
-          'talk.html': 'html/talk.html'
         }
       }
     },

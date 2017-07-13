@@ -101,7 +101,7 @@ section.friend {
   section.friend .searchmem {
     box-sizing: border-box;
     text-align: center;
-    margin-top: 10%; }
+    margin-top: 12%; }
     section.friend .searchmem .member {
       display: inline-block;
       width: 11.9%;
@@ -271,4 +271,4 @@ section.friend {
 
 @media screen and (max-width: 767px) {
   .friend_stage {
-    visibility: hidden; } }
+    height: 140px; } }
