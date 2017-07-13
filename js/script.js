@@ -7,53 +7,23 @@ $(document).ready(function () {
     });
 });
 
-
-//麵包屑
-$(document).ready(function () {
-    bindEventToNavigation();
-    showBreadCrumb(); //Show the breadcrumb when you arrive on the new page
-});
-
-function bindEventToNavigation() {
-    $.each($("nav > ul > li > a"), function (index, element) {
-        $(element).click(function (event) {
-            breadcrumbStateSaver($(this).attr('href'), $(this).text());
-            showBreadCrumb();
-        });
-    });
-    $.each($("nav > .logo > a"), function (index, element) {
-        $(element).click(function (event) {
-            sessionStorage.breadcrumb = "";
-            showBreadCrumb();
-        });
-    });
-}
-
-function breadcrumbStateSaver(link, text) {
-    if (typeof (Storage) != "undefined") {
-        //暫時先一層
-        // if (sessionStorage.breadcrumb) {
-        //     var breadcrumb = sessionStorage.breadcrumb;
-        //     sessionStorage.breadcrumb = breadcrumb + " >> <a href='" + link + "'>" + text + "</a>";
-        // } else {
-        sessionStorage.breadcrumb = "<a href='" + link + "'>" + text + "</a>";
-        // }
-    }
-}
-
-function showBreadCrumb() {
-    $("#breadcrumb").html(sessionStorage.breadcrumb);
-}
-
-//nav顏色變換
+//抓取網頁的檔名
 function getPageName(url) {
     var index = url.lastIndexOf("/") + 1;
     var filenameWithExtension = url.substr(index);
     return filenameWithExtension;
 }
+//nav顏色變換
 $(function () {
-    var currentPageName = getPageName(window.location.pathname);
-    $('nav > ul > li > a[href="' + currentPageName + '"]').css('color', '#FFA266');
+    var currentPath = getPageName(window.location.pathname);
+    $('nav > ul > li > a[href="' + currentPath + '"]').css('color', '#FFA266');
+});
+//麵包屑
+$(function () {
+    var currentPath = getPageName(window.location.pathname);
+    console.log(currentPath);
+    var currentName = $('nav > ul > li > a[href="' + currentPath + '"]').text();
+    $('#breadcrumb').html("<a href='" + currentPath + "'>" + currentName + "</a>");
 });
 
 //漢堡選單伸展

@@ -1,15 +1,17 @@
 body {
-  background: linear-gradient(180deg, #E1F0F7, #9CFFFC); }
+  background: linear-gradient(180deg, #E1F0F7 30%, #9CFFFC); }
 
 section.friend {
   width: 100%;
   max-width: 1280px;
   margin: auto; }
   section.friend h2 {
+    color: #8a7676;
     font-size: 36px;
     text-align: center;
     padding-bottom: 1%; }
   section.friend p {
+    color: #8a7676;
     font-size: 20px;
     text-align: center;
     padding-bottom: 60px; }
@@ -59,7 +61,7 @@ section.friend {
       left: 38%;
       padding: 15px 30px;
       border-radius: 15px;
-      background-color: #e0f0f8; }
+      background-color: rgba(255, 255, 255, 0.5); }
       section.friend .searchbar .filteron span {
         display: inline-block;
         padding: 10px 0; }
@@ -101,7 +103,7 @@ section.friend {
   section.friend .searchmem {
     box-sizing: border-box;
     text-align: center;
-    margin-top: 12%; }
+    margin-top: 18%; }
     section.friend .searchmem .member {
       display: inline-block;
       width: 11.9%;
@@ -115,6 +117,17 @@ section.friend {
         top: 50px; }
       section.friend .searchmem .member img {
         width: 100%; }
+      section.friend .searchmem .member .clothHead,
+      section.friend .searchmem .member .clothUpper,
+      section.friend .searchmem .member .clothLower {
+        width: 100%;
+        position: absolute; }
+      section.friend .searchmem .member .clothHead {
+        top: 0; }
+      section.friend .searchmem .member .clothUpper {
+        top: 58.5%; }
+      section.friend .searchmem .member .clothLower {
+        top: 68.3%; }
       section.friend .searchmem .member .cylinder {
         width: 100%;
         height: 20px;
@@ -158,7 +171,7 @@ section.friend {
         position: absolute;
         left: 0;
         right: 0;
-        top: 5%;
+        top: 0;
         margin: auto;
         border-radius: 5px; }
       section.friend .searchmem .member .info {
@@ -210,10 +223,10 @@ section.friend {
         border: 2px solid #ff95be; }
     @media screen and (max-width: 767px) {
       section.friend .searchmem .member {
-        margin-bottom: 7.5%;
         width: 40%;
         left: 1%;
-        display: block; }
+        display: block;
+        margin-top: 7%; }
         section.friend .searchmem .member:nth-child(odd) {
           top: 75px; }
         section.friend .searchmem .member:nth-child(even) {
@@ -222,9 +235,11 @@ section.friend {
           display: block;
           width: 130%;
           left: 110%;
-          top: 15%;
-          height: 90%; }
+          top: 5%;
+          height: 82vw; }
           section.friend .searchmem .member .info .avatar {
+            width: 30vw;
+            height: 30vw;
             float: none; } }
     section.friend .searchmem > div:nth-child(odd) .cylinder {
       background-color: #4ba6a6; }
@@ -239,6 +254,8 @@ section.friend {
       section.friend .searchmem > div:nth-child(even) .cylinder:after {
         background-color: #ffa6a6; }
   @media screen and (max-width: 767px) {
+    section.friend .searchmem {
+      margin-top: 0; }
     section.friend .searchbar {
       position: relative; }
       section.friend .searchbar label {
@@ -251,13 +268,14 @@ section.friend {
       section.friend .searchbar .filteron {
         margin: auto;
         position: initial;
-        display: block;
         width: 150px;
         margin: 10px auto; }
       section.friend .searchbar .filter {
-        left: 0; }
+        left: 0;
+        display: block; }
       section.friend .searchbar .random {
-        right: 0; }
+        right: 0;
+        display: block; }
       section.friend .searchbar .filteron {
         width: 70%;
         padding: 5%; } }

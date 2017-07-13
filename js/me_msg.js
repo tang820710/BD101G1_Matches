@@ -4,7 +4,7 @@ function doFirst() {
    for (var i = 0, friendList = document.querySelectorAll('.friendList'); i < friendList.length; i++) {
       friendList[i].addEventListener("click", clickNow, false);
    }
-   document.querySelector('.new .friendList .addfriend').addEventListener("click", addfriend, false);
+   document.querySelector('.new .friendList .addfriend').addEventListener("click", addFriend, false);
    document.querySelector('.msg .sendmsg').addEventListener("click", send, false);
    document.getElementById('close').addEventListener("click", close, false);
 
@@ -19,16 +19,17 @@ function clickNow() {
    $("#fname").css('backgroundColor', '#DBDCDC');
 }
 
-function addfriend() {
+function addFriend() {
    document.querySelector('.friends').appendChild(this.parentNode);
    $(this).remove();
 }
 
 function send() {
-   console.log(document.querySelector('.msg textarea').innerHTML);
-   document.querySelector('.chatroom').innerHTML += '<span>' + document.querySelector('.msg textarea').value +
-      '</span><br>';
-
+   var inputmsg = document.querySelector('.msg textarea').value;
+   if (inputmsg !== '') {
+      document.querySelector('.chatroom').innerHTML += '<span>' +
+         inputmsg.replace(/\n/g, "<br>").replace(/ /g, '&nbsp') + '</span><br>';
+   }
    document.querySelector('.msg textarea').value = '';
 }
 
