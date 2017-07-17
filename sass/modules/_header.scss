@@ -148,11 +148,11 @@ header {
          }
          @media screen and (max-width: 767px) {
             .head_cartlist {
-               // display: none !important;
+               display: none !important;
             }
          }
          .head_cartlist {
-            // display: none;
+            display: none;
             width: 200px;
             font-size: 12px;
             position: absolute;
@@ -203,7 +203,7 @@ header {
             }
             .gocart {
                margin: 5px auto 0;
-               width: 75%; // padding: 7px 0;
+               width: 75%;
                box-sizing: border-box;
                border-radius: 20px;
                background-color: #66DBFF;
