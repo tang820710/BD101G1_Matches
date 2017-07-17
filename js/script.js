@@ -48,3 +48,18 @@ $(document).ready(function () {
         }
     });
 });
+
+//購物車開關
+$(document).ready(function () {
+    $('.head_cart').click(function(){
+        if($(window).width() < 767){
+            window.location.href = './cart.html';
+        }else{
+            if($('.head_cartlist').css('display') === 'none'){
+                $('.head_cartlist').css('display','block');
+            }else{
+                $('.head_cartlist').css('display','none');
+            }
+        }
+    });
+});

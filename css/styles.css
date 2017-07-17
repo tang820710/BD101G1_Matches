@@ -4,10 +4,10 @@ header {
   position: fixed;
   top: 0;
   text-align: center;
-  z-index: 100; }
+  z-index: 10; }
   header > ul {
     display: none;
-    z-index: 100;
+    z-index: 10;
     position: fixed;
     top: 0;
     left: -250px;
@@ -56,9 +56,8 @@ header {
       position: absolute;
       right: 7%;
       top: 20%;
-      margin-top: -5px;
       display: inline-block;
-      padding: 0 2%; }
+      padding: 12px 3%; }
       header nav .member a {
         color: #FFF; }
       header nav .member img {
@@ -68,15 +67,59 @@ header {
         vertical-align: middle; }
       header nav .member span {
         font-size: 14px; }
-    header nav .cart {
+    header nav .head_cart {
       position: absolute;
       right: 4%;
       top: 20%;
       display: inline-block;
-      width: 30px; }
-      header nav .cart img {
+      width: 30px;
+      padding: 17px 1%; }
+      header nav .head_cart img {
         width: 100%;
-        vertical-align: middle; }
+        vertical-align: middle;
+        cursor: pointer; }
+      @media screen and (max-width: 767px) {
+        header nav .head_cart .head_cartlist {
+          display: none !important; } }
+      header nav .head_cart .head_cartlist {
+        display: none;
+        width: 150px;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        border-radius: 10px;
+        background-color: #fff;
+        box-sizing: border-box;
+        padding: 10px;
+        z-index: 20; }
+        header nav .head_cart .head_cartlist .cartlist {
+          width: 100%;
+          box-sizing: border-box;
+          padding: 10px;
+          border-bottom: 1px solid #666; }
+          header nav .head_cart .head_cartlist .cartlist .prodpic {
+            display: inline-block;
+            width: 70%;
+            background-color: #FFDDEA;
+            padding: 10px 0; }
+            header nav .head_cart .head_cartlist .cartlist .prodpic img {
+              width: 100%; }
+          header nav .head_cart .head_cartlist .cartlist .isgift {
+            display: inline-block;
+            width: 20%;
+            color: #FFA266;
+            font-size: 15px;
+            vertical-align: middle; }
+        header nav .head_cart .head_cartlist .gocart {
+          margin: 5px auto 0;
+          width: 80%;
+          padding: 7px 0;
+          box-sizing: border-box;
+          border-radius: 20px;
+          background-color: #66DBFF; }
+          header nav .head_cart .head_cartlist .gocart a {
+            font-size: 15px;
+            color: #fff; }
     header nav:before {
       content: '';
       display: block;
@@ -88,7 +131,7 @@ header {
       right: 0;
       margin: 0 auto;
       background-color: #666767;
-      z-index: 100;
+      z-index: 10;
       clip-path: polygon(0% 0%, 0% 100%, 50% 50%, 100% 100%, 100% 0); }
   header:after {
     content: " ";
@@ -101,7 +144,7 @@ header {
     bottom: -11px;
     left: 0px;
     width: 100%;
-    height: 11px; }
+    height: 12px; }
 
 .headerb {
   height: 140px;
@@ -122,6 +165,7 @@ header {
       display: inline-block;
       width: 50px;
       height: 50px;
+      padding: 5px 2%;
       cursor: pointer; }
       header nav .hamburger:before {
         content: '';
@@ -129,14 +173,13 @@ header {
         display: block;
         width: 40px;
         height: 5px;
+        top: 30px;
         background-color: #ccc;
-        top: 25px;
-        left: 5px;
         box-shadow: 0px 12px 0px #ccc, 0px -12px 0px #ccc;
         border-radius: 12px; }
     header nav .member {
-      margin-top: 5px; }
-    header nav .cart {
+      padding: 5px 1.5%; }
+    header nav .head_cart {
       position: fixed;
       top: 30%;
       background-color: #666767;

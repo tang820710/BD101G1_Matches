@@ -5,12 +5,14 @@
     top: 0;
     left: 0;
     background-color: rgba(0, 0, 0, 0.3);
-    .content {
-      width: 90vw;
-      max-width: 800px;
-      height: 80vh;
+    z-index: 100;
+    .me_msg_content {
+      width: 98%;
+      max-width: 1124px;
+      height: 98%;
+      max-height: 850px;
       position: absolute;
-      top: 18vh;
+      top: 0;
       bottom: 0;
       left: 0;
       right: 0;
@@ -18,40 +20,66 @@
       background-color: #fff;
       border-radius: 10px;
       overflow: hidden;
-      .top {
+      .me_msg_top {
         width: 100%;
+        height: 50px;
+        font-size: 20px;
         color: #eee;
         background-color: #B2DAED;
         text-align: center;
-        padding: 17px 20px;
         box-sizing: border-box;
-        .title {
+        .me_msg_title {
           color: #857474;
+          line-height: 50px;
         }
-        #close {
-          float: right;
+        #me_msg_close {
           cursor: pointer;
-          font-size: 20px;
-          line-height: 15px;
+          &:before {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: #fff;
+            transform: rotateZ(45deg);
+            position: absolute;
+            right: 20px;
+            top: 22px;
+          }
+          &:after {
+            content: "";
+            display: block;
+            width: 30px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: #fff;
+            transform: rotateZ(-45deg);
+            position: absolute;
+            right: 20px;
+            top: 22px;
+          }
         }
       }
-      .scope {
+      .me_msg_scope {
+        height: 100%;
+        padding-top: 1%;
         &>div {
           box-sizing: border-box;
           float: left;
         }
-        .friends {
+        .me_msg_friends {
           width: 30%;
-          height: 55vh;
+          height: 70%;
           overflow-y: auto;
           &>div {
             width: 100%;
             padding: 10px;
             box-sizing: border-box;
           }
-          .searchBar {
+          .me_msg_searchBar {
             position: relative;
-            .search {
+            padding: 10px 10%;
+            .me_msg_search {
               width: 90%;
               border: 0;
               padding: 7.5px;
@@ -61,9 +89,9 @@
               background-color: #E0F0F8;
               color: #666;
             }
-            .gosearch {
+            .me_msg_gosearch {
               position: absolute;
-              right: 1%;
+              right: 8%;
               top: 0;
               bottom: 0;
               margin: auto 0;
@@ -78,9 +106,12 @@
               cursor: pointer;
             }
           }
-          .friendList {
+          .me_msg_friendList {
+            padding: 10px 10%;
+            box-sizing: border-box;
+            cursor: pointer;
             span {
-              margin: 0 8%;
+              margin: 0 10%;
             }
             &:nth-child(2) {
               .avatar {
@@ -109,18 +140,18 @@
           }
         }
         @media screen and (max-width: 767px) {
-          .friends {
+          .me_msg_friends {
             width: 100%;
           }
         }
-        .chatroom {
+        .me_msg_chatroom {
           width: 70%;
-          height: 60vh;
-          text-align: left;
+          height: 70%;
+          text-align: right;
           position: relative;
           border-left: 1px solid #ccc;
           border-bottom: 1px solid #ccc;
-          #fname {
+          #me_msg_fname {
             border: 0;
             border-radius: 15px;
             margin: 10px;
@@ -132,40 +163,38 @@
               color: #666;
               margin: 0 3%;
             }
-            .fa-arrow-left{
+            .fa-arrow-left {
               position: absolute;
               left: 3%;
               cursor: pointer;
             }
           }
-          .sendmsg {
+          .me_msg_sendmsg {
             padding: 12.5px;
             background-color: #E0F0F8;
             display: inline-block;
             margin: 7.5px;
             border-radius: 5px;
           }
-          .sendtime {
+          .me_msg_sendtime {
             font-size: 11px;
             margin: 0 10px;
           }
         }
         @media screen and (max-width: 767px) {
-          .chatroom {
+          .me_msg_chatroom {
             width: 100%;
             display: none;
           }
         }
-        .new {
+        .me_msg_new {
           width: 30%;
-          height: 25vh;
-          position: relative;
-          top: -5vh;
+          height: 20%;
           overflow-y: auto;
           span {
-            margin: 0 8%;
+            margin: 0 10%;
           }
-          .newfriend {
+          .me_msg_newfriend {
             background-color: #ffc7a3;
             border-radius: 10px;
             width: 80%;
@@ -174,10 +203,11 @@
             box-sizing: border-box;
             margin: 2% auto 2%;
           }
-          .friendList {
+          .me_msg_friendList {
             width: 100%;
-            padding: 10px;
+            padding: 10px 10%;
             box-sizing: border-box;
+            cursor: pointer;
             &:nth-child(odd) {
               .avatar {
                 border: 2px solid #ff95be;
@@ -189,7 +219,7 @@
               }
             }
           }
-          .addfriend {
+          .me_msg_addfriend {
             vertical-align: middle;
             display: inline-block;
             width: 40px;
@@ -202,21 +232,22 @@
             font-size: 30px;
             color: #fff;
             background-color: #B2DAED;
+            margin-left: 25%;
             cursor: pointer;
           }
         }
         @media screen and (max-width: 767px) {
-          .new {
+          .me_msg_new {
             width: 100%;
           }
         }
-        .msg {
+        .me_msg_msg {
           width: 70%;
-          height: 20vh;
+          height: 20%;
           border-left: 1px solid #ccc;
           textarea {
             width: 100%;
-            height: 6vh;
+            height: 65%;
             resize: none;
             border: 0;
             color: #666;
@@ -227,7 +258,7 @@
               outline: 0;
             }
           }
-          .sendmsg {
+          .me_msg_sendmsg {
             float: right;
             height: 30px;
             font-size: 15px;
@@ -246,7 +277,7 @@
           }
         }
         @media screen and (max-width: 767px) {
-          .msg {
+          .me_msg_msg {
             width: 100%;
             display: none;
           }
@@ -267,21 +298,22 @@
         }
       }
     }
-  }
-
-   ::-webkit-scrollbar {
-    width: 10px;
-    background-color: #F5F5F5;
-  }
-
-   ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    background-color: #EBF2F7;
-  }
-
-   ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    box-shadow: inset 0 0 2px rgba(0, 0, 0, .2);
-    background-color: #DEEEFA;
-  }
+    @media screen and (max-width: 767px) {
+      .me_msg_content {
+        max-height: none;
+      }
+    }
+  } //  ::-webkit-scrollbar {
+  //   width: 10px;
+  //   background-color: #F5F5F5;
+  // }
+  //  ::-webkit-scrollbar-track {
+  //   box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  //   border-radius: 10px;
+  //   background-color: #EBF2F7;
+  // }
+  //  ::-webkit-scrollbar-thumb {
+  //   border-radius: 10px;
+  //   box-shadow: inset 0 0 2px rgba(0, 0, 0, .2);
+  //   background-color: #DEEEFA;
+  // }

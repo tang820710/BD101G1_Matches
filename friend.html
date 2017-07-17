@@ -35,17 +35,27 @@
               </ul>
   
               <div class="member">
-                    <a href="#">
-              <img src="images/defaultmember.png" alt="會員">
-              <span>登入</span>
-           </a>
+                    <!-- 未接後端: 頭像->會員頁 登入->註冊/登入頁  -->                  
+                    <a href="me.html"><img src="images/defaultmember.png" alt="會員"></a>
+                    <a href="register.html"><span>登入</span></a>
+  
               </div>
-              <div class="cart">
-                    <a href="#">
-              <img src="images/cart.png" alt="購物車">
-           </a>
+              <div class="head_cart">
+                    <img src="images/cart.png" alt="購物車"></a>
+                    <div class="head_cartlist">
+                          <div class="cartlist">
+                                <div class="prodpic"><img src="images/line_body.png"></div>
+                                <div class="isgift">送禮</div>
+                          </div>
+                          <div class="cartlist">
+                                <div class="prodpic"><img src="images/line_body.png"></div>
+                                <div class="isgift"></div>
+                          </div>
+                          <div class="gocart"><a href="cart.html">前往結帳</a></div>
+                    </div>
               </div>
         </nav>
+  
         <ul id="hbmenu">
               <li><a href="exchange.html">禮物交友</a></li>
               <li><a href="friend.html">社交圈</a></li>
@@ -61,15 +71,15 @@
   <section class="friend">
     <h2>社交圈</h2>
     <p>在Matches找到契合的夥伴吧</p>
-    <aside class="searchbar">
+    <aside class="friend_searchbar">
       <label>            
-            <input class="search" type="text" name="memId" placeholder="請輸入要搜尋的帳號...">
-            <span class="fa fa-search gosearch" aria-hidden="true"></span>
+            <input class="friend_search" type="text" name="friend_memId" placeholder="請輸入要搜尋的帳號...">
+            <span class="fa fa-search friend_gosearch" aria-hidden="true"></span>
       </label>
-      <div class="filter">
+      <div class="friend_filter">
         <span>會員條件篩選</span>
       </div>
-      <div class="filteron">
+      <div class="friend_filteron">
         <span>選擇性別</span>
         <label>
                <input type="radio" name="gender" id="male" value="male">
@@ -88,10 +98,11 @@
         <label><input type="checkbox" name="interest" value="fashion">時尚</label><br>
         <input type="submit" id="gofilt" value="進行篩選">
       </div>
-      <div class="random">隨機篩選</div>
+      <div class="friend_random">隨機篩選</div>
     </aside>
-    <div class="searchmem">
-      <div class="member">
+    <div class="friend_result">
+      <div class="friend_member">
+        <div class="friend_memId">小荒先生</div>
         <a href="#">
           <img src="friend_img/boy_people.png">
           <!-- 頭 -->
@@ -107,7 +118,7 @@
             <img src="friend_img/cloth_33.png">
           </div>
           <span class="cylinder"></span>
-          <div class="info">
+          <div class="friend_info">
             <div class="avatar">
               <img src="friend_img/boy_people.png">
             </div>
@@ -118,12 +129,13 @@
             </div>
             <div class="selfintro">
               <div>自我介紹</div>
-              <div class="">很高興認識你.....</div>
+              <div class="introduce">很高興認識你.....</div>
             </div>
           </div>
         </a>
       </div>
-      <div class="member">
+      <div class="friend_member">
+        <div class="friend_memId">小咪</div>
         <a href="#">
         <img src="friend_img/girl_people.png">
         <!-- 頭 -->
@@ -139,7 +151,7 @@
           <img src="friend_img/blueRed_foot.png">
         </div>
         <span class="cylinder"></span>
-        <div class="info">
+        <div class="friend_info">
           <div class="avatar">
             <img src="friend_img/girl_people.png">
           </div>
@@ -150,12 +162,13 @@
           </div>
           <div class="selfintro">
             <div>自我介紹</div>
-            <div class="">很高興認識你.....</div>
+            <div class="introduce">很高興認識你.....</div>
           </div>
         </div>
         </a>
       </div>
-      <div class="member">
+      <div class="friend_member">
+        <div class="friend_memId">喔嚕嚕</div>
         <a href="#">
         <img src="friend_img/boy_people.png">
           <!-- 頭 -->
@@ -171,7 +184,7 @@
             <img src="friend_img/cloth_33.png">
           </div>
         <span class="cylinder"></span>
-        <div class="info">
+        <div class="friend_info">
           <div class="avatar">
             <img src="friend_img/boy_people.png">
           </div>
@@ -182,12 +195,13 @@
           </div>
           <div class="selfintro">
             <div>自我介紹</div>
-            <div class="">很高興認識你.....</div>
+            <div class="introduce">很高興認識你.....</div>
           </div>
         </div>
         </a>
       </div>
-      <div class="member">
+      <div class="friend_member">
+        <div class="friend_memId">艾莉絲</div>
         <a href="#">
         <img src="friend_img/girl_people.png">
         <!-- 頭 -->
@@ -203,7 +217,7 @@
           <img src="friend_img/blueRed_foot.png">
         </div>
         <span class="cylinder"></span>
-        <div class="info">
+        <div class="friend_info">
           <div class="avatar">
             <img src="friend_img/girl_people.png">  
           </div>
@@ -214,12 +228,13 @@
           </div>
           <div class="selfintro">
             <div>自我介紹</div>
-            <div class="">很高興認識你.....</div>
+            <div class="introduce">很高興認識你.....</div>
           </div>
         </div>
         </a>
       </div>
-      <div class="member">
+      <div class="friend_member">
+        <div class="friend_memId">安迪</div>
         <a href="#">
         <img src="friend_img/boy_people.png">
           <!-- 頭 -->
@@ -235,7 +250,7 @@
             <img src="friend_img/cloth_33.png">
           </div>
         <span class="cylinder"></span>
-        <div class="info">
+        <div class="friend_info">
           <div class="avatar">
             <img src="friend_img/boy_people.png">
           </div>
@@ -246,12 +261,13 @@
           </div>
           <div class="selfintro">
             <div>自我介紹</div>
-            <div class="">很高興認識你.....</div>
+            <div class="introduce">很高興認識你.....</div>
           </div>
         </div>
         </a>
       </div>
-      <div class="member">
+      <div class="friend_member">
+        <div class="friend_memId">點點小姐</div>
         <a href="#">
         <img src="friend_img/girl_people.png">
         <!-- 頭 -->
@@ -267,7 +283,7 @@
           <img src="friend_img/blueRed_foot.png">
         </div>
         <span class="cylinder"></span>
-        <div class="info">
+        <div class="friend_info">
           <div class="avatar">
             <img src="friend_img/girl_people.png">
           </div>
@@ -278,12 +294,13 @@
           </div>
           <div class="selfintro">
             <div>自我介紹</div>
-            <div class="">很高興認識你.....</div>
+            <div class="introduce">很高興認識你.....</div>
           </div>
         </div>
         </a>
       </div>
-      <div class="member">
+      <div class="friend_member">
+        <div class="friend_memId">唉呦威</div>
         <a href="#">
         <img src="friend_img/boy_people.png">
         <!-- 頭 -->
@@ -299,7 +316,7 @@
           <img src="friend_img/cloth_33.png">
         </div>
         <span class="cylinder"></span>
-        <div class="info">
+        <div class="friend_info">
           <div class="avatar">
             <img src="friend_img/boy_people.png">
           </div>
@@ -310,12 +327,13 @@
           </div>
           <div class="selfintro">
             <div>自我介紹</div>
-            <div class="">很高興認識你.....</div>
+            <div class="introduce">很高興認識你.....</div>
           </div>
         </div>
         </a>
       </div>
-      <div class="member">
+      <div class="friend_member">
+        <div class="friend_memId">BeBe</div>
         <a href="#">
         <img src="friend_img/girl_people.png">
         <!-- 頭 -->
@@ -331,7 +349,7 @@
           <img src="friend_img/blueRed_foot.png">
         </div>
         <span class="cylinder"></span>
-        <div class="info">
+        <div class="friend_info">
           <div class="avatar">
             <img src="friend_img/girl_people.png">
           </div>
@@ -342,7 +360,7 @@
           </div>
           <div class="selfintro">
             <div>自我介紹</div>
-            <div class="">很高興認識你.....</div>
+            <div class="introduce">很高興認識你.....</div>
           </div>
         </div>
         </a>

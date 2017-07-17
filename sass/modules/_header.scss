@@ -4,10 +4,10 @@ header {
    position: fixed;
    top: 0;
    text-align: center;
-   z-index: 100;
+   z-index: 10;
    &>ul {
       display: none;
-      z-index: 100;
+      z-index: 10;
       position: fixed;
       top: 0;
       left: -250px;
@@ -65,9 +65,8 @@ header {
          position: absolute;
          right: 7%;
          top: 20%;
-         margin-top: -5px;
          display: inline-block;
-         padding: 0 2%;
+         padding: 12px 3%;
          a {
             color: #FFF;
          }
@@ -81,15 +80,68 @@ header {
             font-size: 14px;
          }
       }
-      .cart {
+      .head_cart {
          position: absolute;
          right: 4%;
          top: 20%;
          display: inline-block;
          width: 30px;
+         padding: 17px 1%;
          img {
             width: 100%;
             vertical-align: middle;
+            cursor: pointer;
+         }
+         @media screen and (max-width: 767px) {
+            .head_cartlist {
+               display: none !important;
+            }
+         }
+         .head_cartlist {
+            display: none;
+            width: 150px;
+            position: absolute;
+            right: 0;
+            top: 100%;
+            border-radius: 10px;
+            background-color: #fff;
+            box-sizing: border-box;
+            padding: 10px;
+            z-index: 20;
+            .cartlist {
+               width: 100%;
+               box-sizing: border-box;
+               padding: 10px;
+               border-bottom: 1px solid #666;
+               .prodpic {
+                  display: inline-block;
+                  width: 70%;
+                  background-color: #FFDDEA;
+                  padding: 10px 0;
+                  img {
+                     width: 100%;
+                  }
+               }
+               .isgift {
+                  display: inline-block;
+                  width: 20%;
+                  color: #FFA266;
+                  font-size: 15px;
+                  vertical-align: middle;
+               }
+            }
+            .gocart {
+               margin: 5px auto 0;
+               width: 80%;
+               padding: 7px 0;
+               box-sizing: border-box;
+               border-radius: 20px;
+               background-color: #66DBFF;
+               a {
+                  font-size: 15px;
+                  color: #fff;
+               }
+            }
          }
       }
       @mixin centerTie {
@@ -103,7 +155,7 @@ header {
          right: 0;
          margin: 0 auto;
          background-color: #666767;
-         z-index: 100;
+         z-index: 10;
          clip-path: polygon(0% 0%, 0% 100%, 50% 50%, 100% 100%, 100% 0);
       }
       &:before {
@@ -121,7 +173,7 @@ header {
       bottom: -11px;
       left: 0px;
       width: 100%;
-      height: 11px;
+      height: 12px;
    }
    &:after {
       @include zigzag;
@@ -152,6 +204,7 @@ header {
             display: inline-block;
             width: 50px;
             height: 50px;
+            padding: 5px 2%;
             cursor: pointer;
             &:before {
                content: '';
@@ -159,17 +212,16 @@ header {
                display: block;
                width: 40px;
                height: 5px;
+               top: 30px;
                background-color: #ccc;
-               top: 25px;
-               left: 5px;
                box-shadow: 0px 12px 0px #ccc, 0px -12px 0px #ccc;
                border-radius: 12px;
             }
          }
          .member {
-            margin-top: 5px;
+            padding: 5px 1.5%;
          }
-         .cart {
+         .head_cart {
             position: fixed;
             top: 30%;
             background-color: #666767;
