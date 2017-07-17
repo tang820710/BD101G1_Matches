@@ -190,7 +190,8 @@ section.me_msg {
           font-size: 30px;
           color: #fff;
           background-color: #B2DAED;
-          margin-left: 25%;
+          float: right;
+          margin: 10px;
           cursor: pointer; }
       @media screen and (max-width: 767px) {
         section.me_msg .me_msg_content .me_msg_scope .me_msg_new {
