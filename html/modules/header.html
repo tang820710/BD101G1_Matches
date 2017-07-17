@@ -17,33 +17,69 @@
             </ul>
 
             <div class="member">
-                  <!-- 未接後端: 頭像->會員頁 登入->註冊/登入頁  -->                  
-                  <a href="me.html"><img src="images/defaultmember.png" alt="會員"></a>
-                  <a href="register.html"><span>登入</span></a>
-
+                  <div id="login">
+                        <img src="images/defaultmember.png" alt="訪客">
+                        <span>登入</span>
+                  </div>
             </div>
             <div class="head_cart">
                   <img src="images/cart.png" alt="購物車"></a>
                   <div class="head_cartlist">
                         <div class="cartlist">
                               <div class="prodpic"><img src="images/line_body.png"></div>
-                              <div class="isgift">送禮</div>
+                              <div>
+                                    <div class="prodname">條紋上衣</div>
+                                    <div class="prodprice">200 點</div>
+                                    <div class="isgift">送禮: 小小噹</div>
+                              </div>
                         </div>
                         <div class="cartlist">
                               <div class="prodpic"><img src="images/line_body.png"></div>
-                              <div class="isgift"></div>
+                              <div>
+                                    <div class="prodname">條紋上衣</div>
+                                    <div class="prodprice">200 點</div>
+                              </div>
+                        </div>
+                        <div class="cartlist">
+                              <div class="prodpic"><img src="images/redHead_body.png"></div>
+                              <div>
+                                    <div class="prodname">小紅帽上衣</div>
+                                    <div class="prodprice">250 點</div>
+                              </div>
                         </div>
                         <div class="gocart"><a href="cart.html">前往結帳</a></div>
                   </div>
             </div>
       </nav>
 
-      <ul id="hbmenu">
-            <li><a href="exchange.html">禮物交友</a></li>
-            <li><a href="friend.html">社交圈</a></li>
-            <li><a href="shop.html">造型商城</a></li>
-            <li><a href="act.html">季節活動</a></li>
-            <li><a href="talk.html">討論區</a></li>
+      <ul class="hbmenu">
+            <li>
+                  <div class="hb_close"></div>
+            </li>
+            <li><a href="exchange.html"><img src="images/exchange.png">禮物交友</a></li>
+            <li><a href="friend.html"><img src="images/friend.png">社交圈</a></li>
+            <li><a href="shop.html"><img src="images/shop.png">造型商城</a></li>
+            <li><a href="act.html"><img src="images/act.png">季節活動</a></li>
+            <li><a href="talk.html"><img src="images/talk.png">討論區</a></li>
+            <li><a href="cart.html"><img src="images/cartrwd.png">購物車</a></li>
       </ul>
+
+      <div class="loginbox">
+            <div class="login_content" style="color:white">
+                  <div class="login_top">
+                        <div class="login_title">會員登入</div>
+                        <div id="login_close"></div>
+                  </div>
+                  <div class="login_scope">
+                        <span>會員帳號</span><input type="text" name="memId" id="memId"><br>
+                        <span>會員密碼</span><input type="password" name="memPsw" id="memPsw"><br>
+                        <input type="submit" value="送出" class="gologin">
+                        <div>還沒有MATCHES的帳號嗎? 馬上加入我們吧!</div>
+                        <a class="goregister" href="register.html">
+                              <span class="reg">註冊</span>
+                        </a>
+                        </span>
+                  </div>
+            </div>
 </header>
 <div class="headerb"></div>

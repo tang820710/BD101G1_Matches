@@ -3,11 +3,11 @@
 @import "modules/_bread.scss";
 @import "modules/_gotop.scss";
 
-body{   
-  left: 0;
+body{
   overflow-x: hidden;
-  position: relative;
   color: #666;
+  position: relative;
+  left: 0;
 }
 a {
    text-decoration: none;

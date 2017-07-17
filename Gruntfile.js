@@ -28,6 +28,7 @@ module.exports = function (grunt) {
         files: {
           'me_msg.html': 'html/me_msg.html',
           'friend.html': 'html/friend.html',
+          'exchange.html': 'html/exchange.html',
         }
       }
     },

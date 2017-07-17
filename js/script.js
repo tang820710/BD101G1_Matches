@@ -1,5 +1,5 @@
 //回到頂端
-$(document).ready(function () {
+$(function () {
     $('.gotop').click(function () {
         $("html, body").animate({
             scrollTop: 0
@@ -27,39 +27,73 @@ $(function () {
 });
 
 //漢堡選單伸展
-$(document).ready(function () {
+$(function () {
     $('.hamburger').click(function () {
-        if ($('body').css('left') === '0px') {
-            $('#hbmenu').animate({
-                left: "0"
-            }, 200);
+        $('.hbmenu').animate({
+            left: "0"
+        }, 200);
+    });
+});
 
-            $('body').animate({
-                left: "250px"
-            }, 200);
+//漢堡選單關閉
+$(function () {
+    $('.hb_close').click(function () {
+        $('.hbmenu').animate({
+            left: "-250px"
+        }, 200);
+    });
+});
+
+//漢堡nav顏色變換
+$(function () {
+    var currentPath = getPageName(window.location.pathname);
+    $('.hbmenu > li > a[href="' + currentPath + '"]').css('backgroundColor', '#60c3dc');
+});
+
+//購物車開關
+$(function () {
+    $('.head_cart').click(function () {
+        if ($(window).width() < 767) {
+            window.location.href = './cart.html';
         } else {
-            $('#hbmenu').animate({
-                left: "-250px"
-            }, 200);
-
-            $('body').animate({
-                left: "0"
-            }, 200);
+            if ($('.head_cartlist').css('display') === 'none') {
+                $('.head_cartlist').css('display', 'block');
+            } else {
+                $('.head_cartlist').css('display', 'none');
+            }
         }
     });
 });
 
-//購物車開關
-$(document).ready(function () {
-    $('.head_cart').click(function(){
-        if($(window).width() < 767){
-            window.location.href = './cart.html';
-        }else{
-            if($('.head_cartlist').css('display') === 'none'){
-                $('.head_cartlist').css('display','block');
-            }else{
-                $('.head_cartlist').css('display','none');
-            }
+//登入光箱
+$(function () {
+    //判斷登入登出,登出狀態進光箱,登入狀態立刻登出    
+    $('header #login').on('click', function () {
+        if ($('header #login span').html() === "登入") {
+            $('header .loginbox').css('display', 'block');
+        } else if ($('header #login span').html() === "登出") {
+            $('header .member a').remove()
+            $('header #login').html(`
+                        <img src="images/defaultmember.png" alt="訪客">
+                        <span>登入</span>`);
         }
+    });
+    //關閉登入光箱
+    $('header #login_close').on('click', function () {
+        $('header .loginbox').css('display', 'none');
+        $('header #memId').val('');
+        $('header #memPsw').val('');
+    });
+    //未接後端: 按送出立刻登入
+    $('header .gologin').on('click', function () {
+        $('header .loginbox').css('display', 'none');
+        $('header #memId').val('');
+        $('header #memPsw').val('');
+        $('header #login').html(`
+                        <span>登出</span>`);
+        $(`<a href="me.html">
+            <img src="images/defaultmember_login.png" alt="會員">
+            <span>aaa</span>
+           </a>`).insertBefore('header #login');
     });
 });
