@@ -95,7 +95,15 @@ section.me_msg {
             text-align: center;
             font-size: 20px;
             line-height: 40px;
+            box-shadow: 0 2px 2px #65B1C9, 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+            transition: all 0.15s ease-in-out;
             cursor: pointer; }
+            section.me_msg .me_msg_content .me_msg_scope .me_msg_friends .me_msg_searchBar .me_msg_gosearch:hover {
+              background-color: #76E2F4;
+              box-shadow: 0 2px 0 #55D2F9, 0 2px 1px 1px rgba(0, 0, 0, 0.1); }
+            section.me_msg .me_msg_content .me_msg_scope .me_msg_friends .me_msg_searchBar .me_msg_gosearch:active {
+              box-shadow: none;
+              top: 1px; }
         section.me_msg .me_msg_content .me_msg_scope .me_msg_friends .me_msg_friendList {
           padding: 10px 10%;
           box-sizing: border-box;
@@ -220,13 +228,21 @@ section.me_msg {
           box-sizing: border-box;
           vertical-align: middle;
           display: inline-block;
-          border-radius: 15px;
-          box-sizing: border-box;
           outline: 0;
           text-align: center;
-          color: #fff;
           background-color: #66DBFF;
+          color: #fff;
+          text-align: center;
+          border-radius: 40px;
+          box-shadow: 0 2px 2px #65B1C9, 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+          transition: all 0.15s ease-in-out;
           cursor: pointer; }
+          section.me_msg .me_msg_content .me_msg_scope .me_msg_msg .me_msg_sendmsg:hover {
+            background-color: #76E2F4;
+            box-shadow: 0 2px 0 #55D2F9, 0 2px 1px 1px rgba(0, 0, 0, 0.1); }
+          section.me_msg .me_msg_content .me_msg_scope .me_msg_msg .me_msg_sendmsg:active {
+            box-shadow: none;
+            top: 1px; }
       @media screen and (max-width: 767px) {
         section.me_msg .me_msg_content .me_msg_scope .me_msg_msg {
           width: 100%;

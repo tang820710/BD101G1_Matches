@@ -46,17 +46,38 @@
                      vertical-align: middle;
                      text-align: center;
                      line-height: 40px;
+                     box-shadow: 0 2px 2px #65B1C9, 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+                     transition: all 0.15s ease-in-out;
                      cursor: pointer;
+                     &:hover {
+                           background-color: #76E2F4;
+                           box-shadow: 0 2px 0 #55D2F9, 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+                     }
+                     &:active {
+                           box-shadow: none;
+                           top: 1px;
+                     }
                }
                .friend_filter,
                .friend_random {
                      position: absolute;
                      display: inline-block;
                      padding: 12px 30px;
-                     border-radius: 30px;
                      background-color: #66DBFF;
                      color: #fff;
+                     text-align: center;
+                     border-radius: 40px;
+                     box-shadow: 0 2px 2px #65B1C9, 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+                     transition: all 0.15s ease-in-out;
                      cursor: pointer;
+                     &:hover {
+                           background-color: #76E2F4;
+                           box-shadow: 0 2px 0 #55D2F9, 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+                     }
+                     &:active {
+                           box-shadow: none;
+                           top: 1px;
+                     }
                }
                .friend_filter {
                      left: 44%;
@@ -69,9 +90,11 @@
                      position: absolute;
                      text-align: left;
                      left: 38%;
-                     padding: 15px 30px;
+                     top: -5vh;
+                     padding: 12px 30px;
                      border-radius: 15px;
                      background-color: rgba(255, 255, 255, 0.5);
+                     z-index: 5;
                      span {
                            display: inline-block;
                            padding: 10px 0;
@@ -89,7 +112,7 @@
                            }
                            .fa {
                                  color: #aaa;
-                                 padding-left: 30px;
+                                 margin-right: 66px;
                                  font-size: 20px;
                                  cursor: pointer;
                            }
@@ -118,9 +141,19 @@
                            padding: 5px 20px;
                            color: #ffffff;
                            background-color: #66dbff;
+                           box-shadow: 0 2px 2px #65B1C9, 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+                           transition: all 0.15s ease-in-out;
                            cursor: pointer;
                            &:focus {
                                  outline: 0;
+                           }
+                           &:hover {
+                                 background-color: #76E2F4;
+                                 box-shadow: 0 2px 0 #55D2F9, 0 2px 1px 1px rgba(0, 0, 0, 0.1);
+                           }
+                           &:active {
+                                 box-shadow: none;
+                                 top: 1px;
                            }
                      }
                }
@@ -128,7 +161,7 @@
          .friend_result {
                box-sizing: border-box;
                text-align: center;
-               margin-top: 18%;
+               margin-top: 17vh;
                position: relative;
                left: 0;
                .friend_member {
@@ -353,7 +386,7 @@
                }
                .friend_searchbar {
                      position: relative;
-                     & > label {
+                     &>label {
                            margin: auto;
                            position: relative;
                            display: block;
@@ -384,11 +417,13 @@
                }
          }
    }
+
    @media screen and (max-width: 767px) {
          section.friend {
                margin-bottom: 100px;
          }
    }
+
    .friend_stage {
          background-image: url("../friend_img/stage.png");
          background-repeat: repeat-x;
